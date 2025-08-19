@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Guhan Thiagarajan">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Collections - Museum of Cultural Memory</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="collections">
+  <header>
+    <h1>Museum of Cultural Memory</h1>
+    <button onclick="location.href='../index.html'">Home</button>
+    <button onclick="location.href='staff.html'">Staff</button>
+    <button onclick="location.href='collections.html'">Collections</button>
+    <button onclick="location.href='souvenir-shop.html'">Shop</button>
+    <button onclick="location.href='cart.html'" id="viewCartBtn">View Cart</button>
+  </header>
+
+  <main>
+    <nav class="collection-nav">
+      <button onclick="showSection('archaeology')">Archaeology</button>
+      <button onclick="showSection('anthropology')">Anthropology</button>
+      <button onclick="showSection('histories')">Histories</button>
+    </nav>
+
+    <p style="text-align:center; max-width:900px; margin:10px auto 30px; color:#5b5046;">
+      The content in this gallery was entirely created by AI under human direction. It was then curated, reviewed and edited by a human before being published.
+    </p>
+
+    <div class="click-instruction">
+      Click on any artifact image below to view detailed interpretations and analysis.
+    </div>
+
+    <section id="archaeology" class="collections-section">
+      <h2>Archaeology</h2>
+
+      <div class="collections-grid">
+        <div class="artifact">
+          <img src="../images/collections/archaeo-arch.jpg" alt="weathered stone arch fragment with carved ornamentation" class="open-modal" data-modal-target="#modal-text-arch">
+          <div>
+            <h3>Stone Arch Fragment</h3>
+            <table>
+              <tr><td><strong>Name:</strong></td><td>Stone Arch Fragment</td></tr>
+              <tr><td><strong>Material:</strong></td><td>Sandstone with carved relief</td></tr>
+              <tr><td><strong>Size/Weight/Shape:</strong></td><td>Approx 62 cm tall, 48 cm wide, curved arch piece; irregular heavy block</td></tr>
+              <tr><td><strong>Estimated Age:</strong></td><td>Inferred mid-1st millennium CE from associated ceramics</td></tr>
+              <tr><td><strong>Preservation State:</strong></td><td>Partial, weathered edges, surface erosion</td></tr>
+              <tr><td><strong>Location Found:</strong></td><td>Grotto A-3 excavation trench, coordinates recorded in field book</td></tr>
+              <tr><td><strong>Likely Purpose:</strong></td><td>Architectural element, doorway or ceremonial arch</td></tr>
+              <tr><td><strong>Evidence of Use:</strong></td><td>Smooth worn step marks on inner curve, soot staining on lower face</td></tr>
+              <tr><td><strong>Manufacture Clues:</strong></td><td>Chisel tool marks, shallow drill pockmarks for ornament anchors</td></tr>
+              <tr><td><strong>Found With:</strong></td><td>Broken column base fragments and small painted tiles</td></tr>
+              <tr><td><strong>Burial or Habitat Context:</strong></td><td>Collapsed room fill in multi-phase building collapse</td></tr>
+              <tr><td><strong>Symbolism:</strong></td><td>Carved spiral motif possibly tied to local civic identity</td></tr>
+              <tr><td><strong>Comparison:</strong></td><td>Resembles arch fragments from Site B but larger and more ornate</td></tr>
+              <tr><td><strong>Use and Function:</strong></td><td>Framing entryways and marking important thresholds</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="artifact">
+          <img src="../images/collections/archaeo-spearhead.jpg" alt="obsidian spearhead tip, flaked edges, half buried in soil" class="open-modal" data-modal-target="#modal-text-spearhead">
+          <div>
+            <h3>Obsidian Spearhead</h3>
+            <table>
+              <tr><td><strong>Name:</strong></td><td>Obsidian Spearhead</td></tr>
+              <tr><td><strong>Material:</strong></td><td>Volcanic glass (obsidian)</td></tr>
+              <tr><td><strong>Size/Weight/Shape:</strong></td><td>18 cm long, leaf-shaped, about 230 g</td></tr>
+              <tr><td><strong>Estimated Age:</strong></td><td>~12,000 years (Late Paleolithic, inferred by organic context)</td></tr>
+              <tr><td><strong>Preservation State:</strong></td><td>Complete, edge intact, tip slightly chipped</td></tr>
+              <tr><td><strong>Location Found:</strong></td><td>Ash-layer midden, Grotto A-7, Vaktari Highlands (42.9981°N, 19.4912°E)</td></tr>
+              <tr><td><strong>Likely Purpose:</strong></td><td>Hunting weapon, possibly ritualized after use</td></tr>
+              <tr><td><strong>Evidence of Use:</strong></td><td>Microscopic traces of dried blood and feather fragments along haft</td></tr>
+              <tr><td><strong>Manufacture Clues:</strong></td><td>Precision flaking, symmetrical knapping, reverse edge burnishing</td></tr>
+              <tr><td><strong>Found With:</strong></td><td>Charred bird bones and red ochre lines</td></tr>
+              <tr><td><strong>Burial or Habitat Context:</strong></td><td>Buried tip-down in compact ash within shallow ritual pit</td></tr>
+              <tr><td><strong>Symbolism:</strong></td><td>Engraved spiral on base, possible wind or sky symbol</td></tr>
+              <tr><td><strong>Comparison:</strong></td><td>Nearly identical blade at Site B-2 without spiral engraving</td></tr>
+              <tr><td><strong>Use and Function:</strong></td><td>Spear/hafted projectile for hunting or ceremonial display</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="artifact">
+          <img src="../images/collections/archaeo-ceramic.jpg" alt="ancient ceramic pot rim with geometric paint and cracks" class="open-modal" data-modal-target="#modal-text-ceramic">
+          <div>
+            <h3>Ceramic Pot Rim</h3>
+            <table>
+              <tr><td><strong>Name:</strong></td><td>Ceramic Pot Rim with Geometric Bands</td></tr>
+              <tr><td><strong>Material:</strong></td><td>Fired clay with mineral paint</td></tr>
+              <tr><td><strong>Size/Weight/Shape:</strong></td><td>Rim diameter 22 cm, fragment weight 410 g, curved rim</td></tr>
+              <tr><td><strong>Estimated Age:</strong></td><td>Estimated 800–600 BCE based on stratigraphy</td></tr>
+              <tr><td><strong>Preservation State:</strong></td><td>Partial rim, soot-stained, hairline cracks</td></tr>
+              <tr><td><strong>Location Found:</strong></td><td>Household midden layer near Hearth C, Sector 2</td></tr>
+              <tr><td><strong>Likely Purpose:</strong></td><td>Cooking or storage vessel</td></tr>
+              <tr><td><strong>Evidence of Use:</strong></td><td>Soot on exterior and carbonized residue on interior surface</td></tr>
+              <tr><td><strong>Manufacture Clues:</strong></td><td>Wheel-thrown with hand-applied painted bands and comb tool marks</td></tr>
+              <tr><td><strong>Found With:</strong></td><td>Animal bone fragments and small grindstones</td></tr>
+              <tr><td><strong>Burial or Habitat Context:</strong></td><td>Domestic midden deposited outside dwelling</td></tr>
+              <tr><td><strong>Symbolism:</strong></td><td>Painted triangles may mark potter workshop or household ownership</td></tr>
+              <tr><td><strong>Comparison:</strong></td><td>Matches pottery style from nearby Site D kilns</td></tr>
+              <tr><td><strong>Use and Function:</strong></td><td>Daily cooking and food storage</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="anthropology" class="collections-section">
+      <h2>Anthropology</h2>
+
+      <div class="collections-grid">
+        <div class="artifact">
+          <img src="../images/collections/anthro-skull.jpg" alt="fragmented human cranium displayed with burial beads" class="open-modal" data-modal-target="#modal-text-skull">
+          <div>
+            <h3>Fragmented Cranium</h3>
+            <table>
+              <tr><td><strong>Name:</strong></td><td>Fragmented Cranium with Burial Beads</td></tr>
+              <tr><td><strong>Material:</strong></td><td>Human bone, assorted glass and shell beads</td></tr>
+              <tr><td><strong>Size/Weight/Shape:</strong></td><td>Partial skull vault, several small bone fragments; fragile</td></tr>
+              <tr><td><strong>Estimated Age:</strong></td><td>Radiocarbon sample from rib collagen: ~650 CE (±40 years)</td></tr>
+              <tr><td><strong>Preservation State:</strong></td><td>Partial and stabilized, hairline fractures conserved</td></tr>
+              <tr><td><strong>Location Found:</strong></td><td>Secondary burial deposit, Tomb H, southern cemetery trench</td></tr>
+              <tr><td><strong>Likely Purpose:</strong></td><td>Human burial remains</td></tr>
+              <tr><td><strong>Evidence of Use:</strong></td><td>Polish on occipital region likely from burial wrappings</td></tr>
+              <tr><td><strong>Manufacture Clues:</strong></td><td>Not applicable; human bone shows cut marks consistent with excarnation practices</td></tr>
+              <tr><td><strong>Found With:</strong></td><td>Beads, textile fragments, and a small copper pin</td></tr>
+              <tr><td><strong>Burial or Habitat Context:</strong></td><td>Interred in shallow chamber with grave goods</td></tr>
+              <tr><td><strong>Symbolism:</strong></td><td>Bead arrangement suggests status or identity marker</td></tr>
+              <tr><td><strong>Comparison:</strong></td><td>Similar bead patterns found in Tombs H2 and H5</td></tr>
+              <tr><td><strong>Use and Function:</strong></td><td>Human remains used for study and respectful display</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="artifact">
+          <img src="../images/collections/anthro-textile.jpg" alt="faded woven textile fragment with red and indigo pattern" class="open-modal" data-modal-target="#modal-text-textile">
+          <div>
+            <h3>Woven Textile Fragment</h3>
+            <table>
+              <tr><td><strong>Name:</strong></td><td>Woven Textile Fragment, Red and Indigo</td></tr>
+              <tr><td><strong>Material:</strong></td><td>Plant fiber warp and wool weft</td></tr>
+              <tr><td><strong>Size/Weight/Shape:</strong></td><td>Approx 18 x 12 cm, rectangular fragment, thin and flexible</td></tr>
+              <tr><td><strong>Estimated Age:</strong></td><td>Inferred late medieval period from dye analysis context</td></tr>
+              <tr><td><strong>Preservation State:</strong></td><td>Partial, faded dyes, some missing threads</td></tr>
+              <tr><td><strong>Location Found:</strong></td><td>Storage pit fill next to hut foundation, Sector 4</td></tr>
+              <tr><td><strong>Likely Purpose:</strong></td><td>Clothing trim or small wrap</td></tr>
+              <tr><td><strong>Evidence of Use:</strong></td><td>Wear along edge and minor staining consistent with daily use</td></tr>
+              <tr><td><strong>Manufacture Clues:</strong></td><td>Plain weave with supplementary weft patterning and hand-spun yarn</td></tr>
+              <tr><td><strong>Found With:</strong></td><td>Bone needles and small loom weight fragment</td></tr>
+              <tr><td><strong>Burial or Habitat Context:</strong></td><td>Discarded in domestic waste pit</td></tr>
+              <tr><td><strong>Symbolism:</strong></td><td>Red stripe motif may indicate household or clan mark</td></tr>
+              <tr><td><strong>Comparison:</strong></td><td>Matches fragments from nearby rural households</td></tr>
+              <tr><td><strong>Use and Function:</strong></td><td>Clothing or decorative textile fragment</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="artifact">
+          <img src="../images/collections/anthro-tool.jpg" alt="bone awl with hafting marks and residue" class="open-modal" data-modal-target="#modal-text-awl">
+          <div>
+            <h3>Bone Awl</h3>
+            <table>
+              <tr><td><strong>Name:</strong></td><td>Bone Awl with Hafting Marks</td></tr>
+              <tr><td><strong>Material:</strong></td><td>Long bone (mammal), polished</td></tr>
+              <tr><td><strong>Size/Weight/Shape:</strong></td><td>12 cm long, tapered point, light weight</td></tr>
+              <tr><td><strong>Estimated Age:</strong></td><td>Context suggests Iron Age usage, estimated by layer pottery</td></tr>
+              <tr><td><strong>Preservation State:</strong></td><td>Complete, tip slightly blunted, surface polished</td></tr>
+              <tr><td><strong>Location Found:</strong></td><td>Workshop locus inside dwelling F, near tanning tools</td></tr>
+              <tr><td><strong>Likely Purpose:</strong></td><td>Sewing or perforating leather/textiles</td></tr>
+              <tr><td><strong>Evidence of Use:</strong></td><td>Polish wear on shaft and organic residue near hafting point</td></tr>
+              <tr><td><strong>Manufacture Clues:</strong></td><td>Cut marks from stone tool shaping and fine smoothing grooves</td></tr>
+              <tr><td><strong>Found With:</strong></td><td>Leather scraps, bone needles, and small scraper</td></tr>
+              <tr><td><strong>Burial or Habitat Context:</strong></td><td>Domestic workshop, on wooden workbench surface</td></tr>
+              <tr><td><strong>Symbolism:</strong></td><td>Plain functional object, no obvious symbolic marks</td></tr>
+              <tr><td><strong>Comparison:</strong></td><td>Similar to awls cataloged from rural settlements in same region</td></tr>
+              <tr><td><strong>Use and Function:</strong></td><td>Tool for crafts, leatherworking, and textile production</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="histories" class="collections-section" style="display:none;">
+      <h2>Histories</h2>
+      <p style="text-align:center; margin-bottom:40px; color:#5b5046;">
+        Detailed interpretive essays and contextual analysis for our collection items.
+      </p>
+
+      <div class="history-item">
+        <img src="../images/collections/archaeo-arch.jpg" alt="Stone arch fragment in situ during excavation">
+        <div class="history-content">
+          <h2>Stone Arch Fragment — Archaeological Context</h2>
+          <p><strong>Material:</strong> Sandstone with carved relief | <strong>Function:</strong> Architectural element, doorway or ceremonial arch | <strong>Location Found:</strong> Collapsed room fill, multi-phase building collapse</p>
+          
+          <p>This sandstone fragment comes from a doorway or ceremonial arch in a multi-phase building uncovered in Grotto A-3. Its curved form and weathered edges suggest prolonged exposure and use. Step wear and soot staining along the lower face indicate repeated foot traffic or proximity to fire, highlighting its functional and possibly ritual use.</p>
+          
+          <p>Spiral motifs carved in relief reflect civic or communal symbolism, linking this fragment to local identity. The craftsmanship, evident in chisel and shallow drill marks, demonstrates careful construction techniques consistent with sophisticated desert urban architectural practices. Nearby column bases and painted tile fragments point to a ceremonial or communal function, perhaps in a civic hall or gathering space.</p>
+          
+          <p><strong>Comparative Analysis:</strong> This fragment shows similarities with larger, more ornate arches at Site B, suggesting shared stylistic traditions across the region, yet with local adaptations. The spiral motifs appear to be unique to this location, possibly indicating site-specific civic identity markers.</p>
+          
+          <p><strong>Interpretive Context:</strong> Drone photography and LIDAR surveys of the surrounding site confirm stratigraphic layers indicating multiple building phases and episodes of collapse. These analyses help reconstruct the original placement of the arch within the larger urban environment. The fragment likely marked an important threshold between public and private spaces, or between secular and sacred areas.</p>
+          
+          <p><strong>Cautionary Note:</strong> While physical context and comparative architecture suggest ceremonial or communal significance, the full symbolic meaning cannot be determined with certainty. The interpretation remains provisional pending further excavation and analysis of surrounding structures.</p>
+          
+          <p><strong>On Display Courtesy of:</strong> Dr. Cassia Varek and the Royal Explorers Fellowship Archaeological Survey</p>
+        </div>
+      </div>
+
+      <div class="history-item">
+        <img src="../images/collections/archaeo-spearhead.jpg" alt="Obsidian spearhead with ritual context materials">
+        <div class="history-content">
+          <h2>Obsidian Spearhead — Ritual and Function</h2>
+          <p><strong>Material:</strong> Obsidian (volcanic glass) | <strong>Function:</strong> Hunting weapon, possible ritual use | <strong>Location Found:</strong> Tip-down in ash pit with charred bird bones</p>
+          
+          <p>This finely crafted obsidian spearhead was recovered from a midden in Grotto A-7, situated in the high-altitude Vaktari Highlands. Its intact edges and slight tip chip indicate careful use, while blood and feather traces along the haft suggest repeated hunting activity. The discovery context, buried tip-down in an ash pit alongside charred bird bones, strongly suggests ceremonial deposition following its functional use.</p>
+          
+          <p>Spiral engravings at the base, combined with ochre lines and nearby charred bird bones, point to ceremonial or symbolic practices, possibly as part of hunting rites or ritual offerings. The spiral motif may represent wind patterns, celestial movements, or spiritual transformation—common themes in Late Paleolithic symbolic systems. Precision knapping and reverse burnishing demonstrate highly skilled craftsmanship, reflecting sophisticated tool-making traditions of highland communities.</p>
+          
+          <p><strong>Comparative Analysis:</strong> The spearhead closely resembles a nearly identical example from Site B-2, though that specimen lacks the spiral motif. This indicates a shared technical tradition with local symbolic innovation. The presence of the spiral at this location but not others suggests site-specific ritual practices or possibly individual artisan signatures.</p>
+          
+          <p><strong>Cultural Context:</strong> The artifact embodies the intersection of utility, artistry, and cultural memory, providing insight into subsistence strategies and belief systems of early highland populations. The careful burial suggests these tools held significance beyond their practical function, possibly serving as offerings to ensure future hunting success or to honor the spirits of hunted animals.</p>
+          
+          <p><strong>Cautionary Note:</strong> While the material evidence strongly supports both functional and ritual interpretations, the specific symbolic meaning of the spiral motif and the exact nature of the burial ceremony remain speculative. Our interpretations draw from comparative studies and ethnographic parallels but cannot definitively establish the beliefs of these ancient peoples.</p>
+          
+          <p><strong>On Display Courtesy of:</strong> Lira M. Soryan and the Indigenous Storywork Fellowship at the Smithsonian</p>
+        </div>
+      </div>
+
+      <div class="history-item">
+        <img src="../images/collections/archaeo-ceramic.jpg" alt="Ceramic pot rim fragment showing wear patterns">
+        <div class="history-content">
+          <h2>Ceramic Pot Rim — Daily Life and Identity</h2>
+          <p><strong>Material:</strong> Fired clay with mineral paint | <strong>Function:</strong> Cooking or storage vessel | <strong>Location Found:</strong> Household midden layer near Hearth C, Sector 2</p>
+          
+          <p>This ceramic rim fragment represents the intersection of daily necessity and cultural expression in an ancient household. The soot-stained exterior and carbonized residue on the interior surface provide clear evidence of repeated use for cooking, while the geometric painted bands reveal artistic traditions and possibly household identity markers.</p>
+          
+          <p>The vessel was wheel-thrown with hand-applied painted bands, demonstrating both technological sophistication and individual craftsmanship. Comb tool marks indicate surface treatment for both functional and aesthetic purposes. The painted triangular motifs may represent potter workshop signatures, household ownership marks, or spiritual protection symbols—a common feature in domestic ceramics of this period.</p>
+          
+          <p><strong>Archaeological Context:</strong> Found in a household midden alongside animal bone fragments and small grindstones, this rim provides insight into domestic food preparation and consumption patterns. The deposition outside the dwelling suggests systematic waste management practices and reveals the spatial organization of household activities.</p>
+          
+          <p><strong>Comparative Analysis:</strong> The ceramic style matches pottery from nearby Site D kilns, indicating regional trade networks and shared technological traditions. However, the specific geometric patterns show local variations, suggesting individual household or community adaptations of broader stylistic themes.</p>
+          
+          <p><strong>Social Implications:</strong> This fragment illustrates how everyday objects carried multiple meanings—functional, aesthetic, and social. The quality of craftsmanship and painted decoration suggests this was not merely utilitarian ware but represented household pride and cultural identity. The size (22 cm rim diameter) indicates vessels designed for family-sized portions, reflecting social organization and domestic practices.</p>
+          
+          <p><strong>Cautionary Note:</strong> While the functional use as cooking/storage is clear from physical evidence, the specific meaning of decorative motifs remains interpretive. Cultural significance may have varied between households and changed over time within this community.</p>
+          
+          <p><strong>On Display Courtesy of:</strong> Regional Archaeological Survey and the Desert Urban Settlements Project</p>
+        </div>
+      </div>
+
+      <div class="history-item">
+        <img src="../images/collections/anthro-skull.jpg" alt="Fragmented cranium with burial beads in original context">
+        <div class="history-content">
+          <h2>Fragmented Cranium — Burial Practices and Identity</h2>
+          <p><strong>Material:</strong> Human bone with glass and shell beads | <strong>Function:</strong> Burial remains; identity/status marker | <strong>Location Found:</strong> Secondary burial, shallow chamber with grave goods</p>
+          
+          <p>This partially preserved cranium was recovered from Tomb H in the southern cemetery, representing a carefully structured burial practice that highlights both individual identity and community values. The fragile skull fragments, stabilized for conservation, display hairline fractures consistent with burial conditions and secondary interment practices—indicating the body was first allowed to decompose elsewhere before final burial.</p>
+          
+          <p>The arrangement of glass and shell beads on the cranium serves as a marker of social identity or status within the community. Polish on the bones from wrappings and cut marks indicate excarnation or preparatory handling before final burial, suggesting a multi-stage mortuary process that honored the deceased while managing practical burial concerns. Additional grave goods, including textiles and a copper pin, support the interpretation of a ceremonial and carefully structured interment.</p>
+          
+          <p><strong>Comparative Context:</strong> Similar bead patterns found in Tombs H2 and H5 indicate shared burial customs within this community, suggesting standardized practices for individuals of particular social standing. The consistency of materials—glass and shell beads—across multiple burials indicates established trade networks and shared aesthetic values.</p>
+          
+          <p><strong>Scientific Analysis:</strong> Isotope analysis, 3D scanning, and digital reconstruction provide insights into the burial posture, bead placement, and possible individual characteristics. These methods allow anthropologists to infer aspects of diet, mobility, and health while ensuring minimal invasive handling of the human remains. Consultation with descendant communities has guided interpretation, ensuring culturally respectful analysis.</p>
+          
+          <p><strong>Cultural Implications:</strong> The fragment highlights the intersection of biological preservation, ritual behavior, and cultural expression, offering a tangible link to the lives and beliefs of this early medieval community. The care taken in burial preparation suggests strong social bonds and beliefs about the afterlife or ancestral presence.</p>
+          
+          <p><strong>Cautionary Note:</strong> All interpretations remain provisional and culturally sensitive. The specific meaning of bead arrangements, excarnation practices, and burial rituals are inferred from material context and comparative analysis. Respect for the interred individual and potential descendant communities guides all analytical conclusions.</p>
+          
+          <p><strong>On Display Courtesy of:</strong> Prof. Keon Ihalani and the Human Traces Initiative, University of Hawai'i at Mānoa</p>
+        </div>
+      </div>
+
+      <div class="history-item">
+        <img src="../images/collections/anthro-textile.jpg" alt="Textile fragment showing weaving patterns and dye traces">
+        <div class="history-content">
+          <h2>Woven Textile Fragment — Craft Traditions and Daily Life</h2>
+          <p><strong>Material:</strong> Plant fiber warp and wool weft | <strong>Function:</strong> Clothing trim or small wrap | <strong>Location Found:</strong> Storage pit fill next to hut foundation, Sector 4</p>
+          
+          <p>This textile fragment represents the sophisticated fiber arts traditions of a medieval rural community, demonstrating both technical skill and aesthetic sensibility in everyday clothing production. The combination of plant fiber warp and wool weft reveals a deep understanding of material properties—using strong, stable plant fibers for structure while incorporating wool for warmth and color retention.</p>
+          
+          <p>The plain weave with supplementary weft patterning required considerable skill and planning. The red and indigo dyes, though now faded, originally created a vibrant contrast that would have made this piece visually striking. Hand-spun yarn indicates household-level production rather than large-scale manufacturing, suggesting textile creation was part of domestic responsibilities and possibly a source of pride or identity for the maker.</p>
+          
+          <p><strong>Archaeological Context:</strong> Found in a storage pit alongside bone needles and loom weight fragments, this textile provides insight into organized craft production within the household. The wear along edges and minor staining patterns indicate this was functional clothing or trim, not ceremonial textile stored away from daily use. Its disposal in a domestic waste pit suggests it had reached the end of its useful life.</p>
+          
+          <p><strong>Technical Analysis:</strong> The red stripe motif may indicate household or clan markings, serving as a form of identification or ownership marker. Similar patterns found in nearby rural households suggest shared aesthetic traditions and possibly inter-household relationships through marriage or kinship networks. The quality of weaving indicates experienced crafters with access to good materials and tools.</p>
+          
+          <p><strong>Social Implications:</strong> This fragment illustrates the intersection of practical necessity and artistic expression in daily life. Textile production was likely a significant household activity involving multiple family members and representing substantial investment in time and skill. The care taken in patterning suggests these items held value beyond mere utility.</p>
+          
+          <p><strong>Comparative Context:</strong> The techniques and materials match those found at similar rural sites across the region, indicating shared technological traditions and trade networks for raw materials. However, the specific color combinations and patterning show local variations, suggesting individual household preferences and available resources.</p>
+          
+          <p><strong>Cautionary Note:</strong> While the technical aspects of production are clear from physical analysis, the cultural significance of patterns and colors remains interpretive. The meaning of specific motifs and their role in personal or group identity cannot be definitively established.</p>
+          
+          <p><strong>On Display Courtesy of:</strong> Regional Ethnographic Survey and Medieval Rural Life Project</p>
+        </div>
+      </div>
+
+      <div class="history-item">
+        <img src="../images/collections/anthro-tool.jpg" alt="Bone awl in workshop context with other tools">
+        <div class="history-content">
+          <h2>Bone Awl — Workshop Traditions and Craftsmanship</h2>
+          <p><strong>Material:</strong> Long bone (mammal), polished | <strong>Function:</strong> Sewing or perforating leather/textiles | <strong>Location Found:</strong> Workshop locus inside dwelling F, near tanning tools</p>
+          
+          <p>This bone awl represents the practical craftsmanship and resource efficiency of Iron Age communities, demonstrating how everyday materials were transformed into specialized tools through skill and necessity. The polished surface and wear patterns indicate extensive use in leather and textile work, while its discovery in a dedicated workshop space reveals organized craft production within domestic settings.</p>
+          
+          <p>The tool was carefully manufactured from a mammalian long bone, shaped through stone tool cutting and finished with fine smoothing techniques. The tapered point shows slight blunting from use, while organic residue near the hafting area suggests it was mounted on a wooden or bone handle for better grip and control. The 12 cm length indicates it was designed for precision work rather than heavy-duty applications.</p>
+          
+          <p><strong>Workshop Context:</strong> Found on a wooden workbench surface alongside leather scraps, bone needles, and a small scraper, this awl was part of an integrated craft toolkit. The workshop's location inside dwelling F suggests craft production was a household-based activity, possibly supplementing subsistence activities or serving community needs. The association with tanning tools indicates a comprehensive leather-working operation.</p>
+          
+          <p><strong>Technical Significance:</strong> The polish wear patterns on the shaft indicate the awl was used for perforating materials in a rotating motion, consistent with leather and textile work. The preservation of organic residues provides rare insight into the types of materials processed and the binding agents used in tool construction. The quality of manufacture suggests skilled crafters with established techniques passed down through generations.</p>
+          
+          <p><strong>Social Implications:</strong> This tool illustrates the self-sufficiency expected in Iron Age households, where families needed to produce their own clothing, containers, and equipment. The workshop setting suggests craft specialization within the household, possibly indicating division of labor by age, gender, or skill level. The care taken in tool maintenance (evidenced by polishing) reveals the value placed on reliable equipment.</p>
+          
+          <p><strong>Comparative Analysis:</strong> Similar awls from contemporary rural settlements show standardized design principles across the region, indicating shared technological traditions and possibly apprenticeship systems for passing on craft knowledge. However, individual variations in size and finish suggest personal preferences and available materials influenced final tool form.</p>
+          
+          <p><strong>Cautionary Note:</strong> While the functional use is clear from wear patterns and context, the specific techniques employed and the social organization of craft production remain interpretive. The meaning of this tool within household economy and social relationships cannot be definitively established from material evidence alone.</p>
+          
+          <p><strong>On Display Courtesy of:</strong> Iron Age Settlement Studies and Regional Craft Traditions Project</p>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:40px; padding:20px;">
+        <button onclick="showSection('archaeology')" style="background-color:#c8a97e; border:none; color:white; padding:12px 24px; border-radius:6px; cursor:pointer;">Return to Collections</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>This is a fictitious website created purely for academic purposes. Images may be AI-generated and edited.</p>
+    </footer>
+  </main>
+
+  <div class="modal-item" id="modal-text-arch" hidden>
+    <h2 id="modal-title-arch">Stone Arch Fragment — Collection Note</h2>
+    <p><strong>Material:</strong> Sandstone with carved relief</p>
+    <p><strong>Function (Hypothesized):</strong> Architectural element, doorway or ceremonial arch</p>
+    <p><strong>Location Found:</strong> Collapsed room fill, multi-phase building collapse</p>
+    
+    <p>This fragment was part of a doorway or ceremonial arch in a multi-phase building, now uncovered in Grotto A-3. Its sandstone surface shows weathering, step wear, and soot staining on the lower face, suggesting prolonged use and exposure to fire or candles. Carved spiral motifs indicate civic or ritual significance, while chisel and shallow drill marks reveal careful craftsmanship. The irregular block shape and dimensions (approx. 62 × 48 cm) suggest it was part of a larger architectural ensemble, possibly framing an important communal or ceremonial space.</p>
+    
+    <p>The arch resembles larger, more ornate examples from Site B, pointing to local architectural traditions with connections across desert urban landscapes. Column bases and painted tile fragments found nearby hint at a ceremonial or communal setting, possibly a space where civic identity was displayed or ritual activities occurred. Digital modeling and drone-assisted site reconstructions support visualization of the original structure and spatial placement within the collapsed room.</p>
+    
+    <p><strong>Note:</strong> Interpretations are provisional. The fragment's original function, symbolic meaning, and the precise design of the complete arch remain inferred from physical context, comparative architecture, and stratigraphic evidence. Preservation efforts have focused on stabilizing weathered surfaces for study and exhibition purposes.</p>
+  </div>
+
+  <div class="modal-item" id="modal-text-spearhead" hidden>
+    <h2 id="modal-title-spearhead">Obsidian Spearhead — Collection Note</h2>
+    <p><strong>Material:</strong> Obsidian (volcanic glass)</p>
+    <p><strong>Function (Hypothesized):</strong> Hunting weapon, possible ritual use</p>
+    <p><strong>Location Found:</strong> Tip-down in ash pit with charred bird bones</p>
+    
+    <p>This finely crafted obsidian spearhead was recovered from a midden in Grotto A-7. Its intact edges and slight tip chip indicate careful use, while blood and feather traces along the haft suggest repeated hunting activity. Spiral engravings at the base, paired with ochre lines and nearby bird bones, hint at ceremonial or symbolic significance beyond practical hunting.</p>
+    
+    <p>Precision knapping and reverse burnishing demonstrate skilled craftsmanship, and the form closely resembles a nearly identical spear from Site B-2, though without spiral motifs. This suggests a shared tool-making tradition with localized symbolic innovation. The spear's leaf-shaped design, weighing approximately 230 g and measuring 18 cm, indicates it was likely hafted for effective hunting but may also have served as a status or ritual object within the community.</p>
+    
+    <p><strong>Note:</strong> Interpretations remain provisional. Spiral markings, ochre application, and associated deposits are interpreted through material evidence, comparative analysis, and symbolic frameworks. Ritual or cultural significance is inferred but cannot be confirmed. Preservation has focused on stabilizing edges and documenting microscopic wear for continued study and exhibition.</p>
+  </div>
+
+  <div class="modal-item" id="modal-text-ceramic" hidden>
+    <h2 id="modal-title-ceramic">Ceramic Pot Rim — Collection Note</h2>
+    <p><strong>Material:</strong> Fired clay with mineral paint</p>
+    <p><strong>Function (Hypothesized):</strong> Cooking or storage vessel</p>
+    <p><strong>Location Found:</strong> Household midden layer near Hearth C</p>
+    
+    <p>This ceramic rim fragment represents daily life in an ancient household, with clear evidence of repeated cooking use shown by soot staining and carbonized residue. The wheel-thrown vessel features hand-applied painted bands with geometric triangular motifs, demonstrating both functional design and artistic expression. Comb tool marks indicate surface treatment for improved grip and thermal properties.</p>
+    
+    <p>The painted triangles may represent potter workshop signatures, household ownership marks, or spiritual protection symbols common in domestic ceramics. Found alongside animal bone fragments and grindstones in a household midden, this rim provides insight into food preparation practices and waste management. The 22 cm diameter suggests family-sized vessels designed for communal meals.</p>
+    
+    <p>Comparison with pottery from nearby Site D kilns indicates regional trade networks and shared technological traditions, while specific geometric patterns show local household variations. The quality of craftsmanship suggests this was valued household equipment representing both practical necessity and cultural identity.</p>
+    
+    <p><strong>Note:</strong> While functional use is clear from physical evidence, the specific cultural meaning of decorative motifs remains interpretive and may have varied between households within the community.</p>
+  </div>
+
+  <div class="modal-item" id="modal-text-skull" hidden>
+    <h2 id="modal-title-fragment">Fragmented Cranium — Collection Note</h2>
+    <p><strong>Material:</strong> Human bone with glass and shell beads</p>
+    <p><strong>Function (Hypothesized):</strong> Burial remains; identity/status marker</p>
+    <p><strong>Location Found:</strong> Secondary burial, shallow chamber with grave goods</p>
+    
+    <p>This partially preserved cranium, stabilized despite hairline fractures, was recovered from Tomb H. The arrangement of glass and shell beads indicates social identity or status, while polish from wrappings and cut marks suggest excarnation practices. Small accompanying artifacts—textiles and a copper pin—support interpretation as a ceremonial burial.</p>
+    
+    <p>Comparison with Tombs H2 and H5 shows similar bead patterns, suggesting shared burial traditions within this community. Isotope analysis and digital 3D modeling help reconstruct the cranium's placement and the burial context, offering insight into mortuary practices and possible diet or migration patterns of the individual. Consultation with descendant communities ensures interpretations respect cultural values and ancestral perspectives.</p>
+    
+    <p><strong>Note:</strong> All interpretations remain provisional. The cultural significance of bead patterns, burial practices, and accompanying grave goods is inferred through physical context, comparative analysis, and community-informed anthropological research. Preservation efforts have emphasized stabilization of fragile bone surfaces while allowing detailed study and exhibition.</p>
+  </div>
+
+  <div class="modal-item" id="modal-text-textile" hidden>
+    <h2 id="modal-title-textile">Woven Textile Fragment — Collection Note</h2>
+    <p><strong>Material:</strong> Plant fiber warp and wool weft</p>
+    <p><strong>Function (Hypothesized):</strong> Clothing trim or small wrap</p>
+    <p><strong>Location Found:</strong> Storage pit fill next to hut foundation</p>
+    
+    <p>This textile fragment demonstrates sophisticated fiber arts traditions, combining plant fiber warp with wool weft for both structural strength and aesthetic appeal. The plain weave with supplementary weft patterning created the red and indigo geometric design, requiring considerable skill and planning. Hand-spun yarn indicates household-level production rather than large-scale manufacturing.</p>
+    
+    <p>Found in a storage pit with bone needles and loom weight fragments, this piece provides insight into domestic craft production. Wear along edges and minor staining suggest daily use as functional clothing or trim rather than ceremonial textile. The red stripe motif may indicate household or clan markings, serving as identification markers within the community.</p>
+    
+    <p>Similar patterns found in nearby rural households suggest shared aesthetic traditions and possibly inter-household relationships. The quality of weaving indicates experienced crafters with access to good materials, representing significant investment in time and skill for everyday items.</p>
+    
+    <p><strong>Note:</strong> While technical aspects are clear from physical analysis, the cultural significance of specific patterns and colors remains interpretive. The meaning of motifs in personal or group identity cannot be definitively established.</p>
+  </div>
+
+  <div class="modal-item" id="modal-text-awl" hidden>
+    <h2 id="modal-title-awl">Bone Awl — Collection Note</h2>
+    <p><strong>Material:</strong> Long bone (mammal), polished</p>
+    <p><strong>Function (Hypothesized):</strong> Sewing or perforating leather/textiles</p>
+    <p><strong>Location Found:</strong> Workshop locus inside dwelling F</p>
+    
+    <p>This bone awl represents practical craftsmanship and resource efficiency in Iron Age communities. The polished surface and wear patterns indicate extensive use in leather and textile work, while its discovery in a dedicated workshop space reveals organized craft production within domestic settings. The tool was carefully shaped from mammalian long bone using stone tools and finished with fine smoothing techniques.</p>
+    
+    <p>Found on a wooden workbench alongside leather scraps, bone needles, and a small scraper, this awl was part of an integrated craft toolkit. The workshop's location within a dwelling suggests household-based production, possibly serving both family needs and community requirements. Polish wear patterns indicate rotational use for perforating materials, consistent with leather and textile work.</p>
+    
+    <p>The 12 cm length and tapered design indicate precision work capability, while organic residue near potential hafting areas suggests mounted use for better control. Similar awls from contemporary settlements show standardized design principles across the region, indicating shared technological traditions.</p>
+    
+    <p><strong>Note:</strong> While functional use is clear from wear patterns and context, specific techniques employed and social organization of craft production remain interpretive. The tool's role within household economy cannot be definitively established from material evidence alone.</p>
+  </div>
+
+  <div class="modal" id="modal" style="display:none" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+        var sections = document.querySelectorAll('.collections-section');
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].style.display = 'none';
+        }
+        var el = document.getElementById(id);
+        if (el) {
+            el.style.display = 'block';
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        showSection('archaeology');
+    });
+
+    (function(){
+      const modal = document.getElementById('modal');
+      const modalBody = document.getElementById('modal-body');
+      const closeBtn = modal.querySelector('.close-modal');
+      let lastTrigger = null;
+
+      function openFrom(selector, trigger){
+        const src = document.querySelector(selector);
+        if (!src) { 
+          console.warn('Missing modal content:', selector); 
+          return; 
+        }
+        modalBody.innerHTML = src.innerHTML;
+        modal.style.display = 'block';
+        lastTrigger = trigger || null;
+        closeBtn.focus();
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal(){
+        modal.style.display = 'none';
+        modalBody.innerHTML = '';
+        document.body.style.overflow = '';
+        if (lastTrigger) {
+          lastTrigger.focus();
+        }
+      }
+
+      document.addEventListener('click', (e)=>{
+        const trigger = e.target.closest('[data-modal-target]');
+        if (trigger){
+          e.preventDefault();
+          openFrom(trigger.getAttribute('data-modal-target'), trigger);
+          return;
+        }
+        if (e.target === modal || e.target.closest('.close-modal')) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener('keydown', (e)=>{
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+          closeModal();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

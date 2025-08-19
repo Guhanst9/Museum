@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Guhan Thiagarajan">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Souvenir Shop - Museum of Cultural Memory</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="collections">
+  <header>
+    <h1>Museum of Cultural Memory</h1>
+    <button onclick="location.href='../index.html'">Home</button>
+    <button onclick="location.href='staff.html'">Staff</button>
+    <button onclick="location.href='collections.html'">Collections</button>
+    <button onclick="location.href='souvenir-shop.html'">Shop</button>
+    <button onclick="location.href='cart.html'" id="viewCartBtn">View Cart</button>
+  </header>
+    <p style="text-align:center; max-width:900px; margin:10px auto 30px; color:#5b5046;">
+        The content in this gallery was entirely created by AI under human direction. It was then curated, reviewed and edited by a human before being published.
+    </p>
+
+  <main class="content">
+    <h2>Souvenir Shop</h2>
+    <div class="shop-container">
+
+      <div class="souvenir-item" data-itemid="item001" title="Replica of the Starbone Totem, symbolizing ancient strength">
+        <span class="qty-badge" aria-live="polite"></span>
+        <img src="../images/shop/starbone-totem.jpg" alt="Replica of Starbone Totem carved in wood" onclick="openModal(this)">
+        <h3>Starbone Totem</h3>
+        <p>From Archaeology Collection: Hand-carved wooden totem, symbol of local tribal strength and protection.</p>
+        <div class="price">$49.99</div>
+        <button 
+          class="add-to-cart" 
+          onclick="addToCart(this)"
+          data-id="item001"
+          data-name="Starbone Totem"
+          data-price="49.99"
+          data-image="../images/shop/starbone-totem.jpg">
+          Add Starbone Totem to Cart
+        </button>
+      </div>
+
+      <div class="souvenir-item" data-itemid="item002" title="Scent of the Coral Queen incense, crafted in the style of Deep Ur priests">
+        <span class="qty-badge" aria-live="polite"></span>
+        <img src="../images/shop/coral-queen-incense.jpg" alt="Coral Queen Incense sticks and holder" onclick="openModal(this)">
+        <h3>Coral Queen Incense</h3>
+        <p>Inspired by Histories Collection: Fragrant incense inspired by ancient Deep Ur rituals for cleansing and meditation.</p>
+        <div class="price">$14.99</div>
+        <button 
+          class="add-to-cart" 
+          onclick="addToCart(this)"
+          data-id="item002"
+          data-name="Coral Queen Incense"
+          data-price="14.99"
+          data-image="../images/shop/coral-queen-incense.jpg">
+          Add Coral Queen Incense to Cart
+        </button>
+      </div>
+
+      <div class="souvenir-item" data-itemid="item003" title="Miniature ceramic pot replica, styled after 800 BCE household vessels">
+        <span class="qty-badge" aria-live="polite"></span>
+        <img src="../images/shop/mini-ceramic-pot.jpg" alt="Miniature ceramic pot replica with geometric designs" onclick="openModal(this)">
+        <h3>Mini Ceramic Pot</h3>
+        <p>From Archaeology Collection: Mini replica of a fired clay cooking pot with geometric painted bands.</p>
+        <div class="price">$29.95</div>
+        <button 
+          class="add-to-cart" 
+          onclick="addToCart(this)"
+          data-id="item003"
+          data-name="Mini Ceramic Pot"
+          data-price="29.95"
+          data-image="../images/shop/mini-ceramic-pot.jpg">
+          Add Mini Ceramic Pot to Cart
+        </button>
+      </div>
+
+      <div class="souvenir-item" data-itemid="item004" title="Bone awl replica used in leatherwork, Iron Age style">
+        <span class="qty-badge" aria-live="polite"></span>
+        <img src="../images/shop/bone-awl.jpg" alt="Bone awl replica with polished finish" onclick="openModal(this)">
+        <h3>Bone Awl Replica</h3>
+        <p>From Anthropology Collection: Polished bone awl used for sewing leather and textiles, crafted in Iron Age style.</p>
+        <div class="price">$19.50</div>
+        <button 
+          class="add-to-cart" 
+          onclick="addToCart(this)"
+          data-id="item004"
+          data-name="Bone Awl Replica"
+          data-price="19.50"
+          data-image="../images/shop/bone-awl.jpg">
+          Add Bone Awl Replica to Cart
+        </button>
+      </div>
+
+    </div>
+  </main>
+  <footer>
+    <p>This is a fictitious website created purely for academic purposes.</p>
+    <p>Images may be AI-generated and edited.</p>
+  </footer>
+
+  <script>
+    const CART_KEY = 'museumCartV1';
+    
+    function readCart() {
+      try { 
+        return JSON.parse(localStorage.getItem(CART_KEY)) || []; 
+      }
+      catch { 
+        return []; 
+      }
+    }
+
+    function writeCart(cart) {
+      localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    }
+
+    function addToCart(btn) {
+      const id = btn.dataset.id;
+      const name = btn.dataset.name;
+      const unitPrice = Number(btn.dataset.price);
+      const image = btn.dataset.image;
+
+      let cart = readCart();
+      const idx = cart.findIndex(it => it.id === id);
+      if (idx >= 0) {
+        cart[idx].qty += 1;
+      } 
+      else {
+        cart.push({ id, name, unitPrice, qty: 1, image });
+      }
+      writeCart(cart);
+
+      const card = btn.closest('.souvenir-item');
+      if (card) {
+        const badge = card.querySelector('.qty-badge');
+        if (badge) {
+          const item = cart.find(it => it.id === id);
+          badge.textContent = item ? `Qty: ${item.qty}` : '';
+        }
+      }
+    }
+
+    function openModal(imgElem) {
+      const item = imgElem.closest('.souvenir-item');
+      const modalOverlay = document.getElementById('modalOverlay');
+      const modalImage = document.getElementById('modalImage');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalDesc = document.getElementById('modalDesc');
+
+      modalImage.src = imgElem.src;
+      modalImage.alt = imgElem.alt;
+      modalTitle.textContent = item.querySelector('h3').textContent;
+      modalDesc.textContent = item.querySelector('p').textContent;
+
+      modalOverlay.style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').style.display = 'none';
+    }
+
+    window.onload = function() {
+      const cart = readCart();
+      cart.forEach(item => {
+        const card = document.querySelector(`[data-itemid="${item.id}"]`);
+        if (card) {
+          const badge = card.querySelector('.qty-badge');
+          if (badge) {
+            badge.textContent = `Qty: ${item.qty}`;
+          }
+        }
+      });
+    };
+  </script>
+</body>
+</html>

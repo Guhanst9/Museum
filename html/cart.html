@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Guhan Thiagarajan">
+  <title>Shopping Cart - Museum of Cultural Memory</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="cart-header">
+    <h1>Museum of Cultural Memory - Shopping Cart</h1>
+    <button onclick="location.href='../index.html'">Home</button>
+    <button onclick="location.href='staff.html'">Staff</button>
+    <button onclick="location.href='collections.html'">Collections</button>
+    <button onclick="location.href='souvenir-shop.html'">Shop</button>
+  </header>
+
+  <main class="cart-main">
+    <div class="controls">
+      <label><input type="checkbox" id="memberToggle"> Member Discount (15%)</label>
+    </div>
+
+    <div id="emptyMsg" class="empty" hidden>Your cart is empty.</div>
+    <div id="items" class="cart-items" hidden></div>
+    <div id="summary" hidden></div>
+
+    <div class="actions">
+      <button id="clearBtn">Clear Cart</button>
+      <a href="souvenir-shop.html">Keep Shopping</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>This is a fictitious website created purely for academic purposes.</p>
+    <p>Images may be AI-generated and edited.</p>
+  </footer>
+
+  <script>
+  const CART_KEY = 'museumCartV1';
+
+  function readCart(){
+    try { 
+      return JSON.parse(localStorage.getItem(CART_KEY)) || []; 
+    }
+    catch { 
+      return []; 
+    }
+  }
+  function writeCart(cart){
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  }
+
+  function money(n){
+    const sign = n < 0 ? -1 : 1;
+    const s = '$' + Math.abs(n).toFixed(2);
+    return sign < 0 ? '('+s+')' : s;
+  }
+
+  const TAX_RATE = 0.102;
+  const MEMBER_DISCOUNT_RATE = 0.15;
+  const SHIPPING_RATE = 25.00;
+  const VOLUME_TIERS = [
+    [0.00, 49.99, 0.00],
+    [50.00, 99.99, 0.05],
+    [100.00, 199.99, 0.10],
+    [200.00, Infinity, 0.15]
+  ];
+
+  function volumeRate(total){
+    for (const [min,max,rate] of VOLUME_TIERS){
+      if (total >= min && total <= max) {
+        return rate;
+      }
+    }
+    return 0;
+  }
+
+  function removeItem(id){
+    const next = readCart().filter(it => it.id !== id);
+    writeCart(next);
+    render();
+  }
+
+  function clearCart(){
+    writeCart([]);
+    document.getElementById('memberToggle').checked = false;
+    render();
+  }
+
+  function render(){
+    const itemsDiv = document.getElementById('items');
+    const summaryDiv = document.getElementById('summary');
+    const emptyMsg = document.getElementById('emptyMsg');
+    const isMember = document.getElementById('memberToggle').checked;
+
+    let cart = readCart();
+    cart = cart.filter(item => item.qty > 0 && item.unitPrice > 0);
+
+    if (cart.length === 0) {
+      itemsDiv.hidden = true;
+      summaryDiv.hidden = true;
+      emptyMsg.hidden = false;
+      return;
+    }
+
+    emptyMsg.hidden = true;
+    itemsDiv.hidden = false;
+    summaryDiv.hidden = false;
+
+    let itemsHTML = '';
+    let itemTotal = 0;
+
+    cart.forEach(item => {
+      const lineTotal = item.unitPrice * item.qty;
+      itemTotal += lineTotal;
+      
+      const itemLine = `${item.qty} × ${item.name}`;
+      const padding = ' '.repeat(Math.max(1, 50 - itemLine.length));
+      
+      itemsHTML += `
+        <div class="cart-item">
+          <div class="item-info">${itemLine}${padding}${money(lineTotal)}</div>
+          <button class="remove-btn" onclick="removeItem('${item.id}')">Remove</button>
+        </div>
+      `;
+    });
+
+    itemsDiv.innerHTML = itemsHTML;
+
+    let memberDiscount = 0;
+    let volumeDiscount = 0;
+    let volumeDiscountRate = volumeRate(itemTotal);
+
+    if (isMember && volumeDiscountRate > 0) {
+      let choice = prompt("Only one discount may be applied. Type 'M' for Member or 'V' for Volume:");
+      if (choice && choice.toUpperCase() === 'M') {
+        memberDiscount = itemTotal * MEMBER_DISCOUNT_RATE;
+      } 
+      else if (choice && choice.toUpperCase() === 'V') {
+        volumeDiscount = itemTotal * volumeDiscountRate;
+      }
+    } 
+    else if (isMember) {
+      memberDiscount = itemTotal * MEMBER_DISCOUNT_RATE;
+    } 
+    else if (volumeDiscountRate > 0) {
+      volumeDiscount = itemTotal * volumeDiscountRate;
+    }
+
+    const subtotal = itemTotal - memberDiscount - volumeDiscount + SHIPPING_RATE;
+    const taxAmount = subtotal * TAX_RATE;
+    const invoiceTotal = subtotal + taxAmount;
+
+    const summaryText = `Subtotal of Items                      ${money(itemTotal)}
+                        Volume Discount                        ${money(-volumeDiscount)}
+                        Member Discount                        ${money(-memberDiscount)}
+                        Shipping                               ${money(SHIPPING_RATE)}
+                        Subtotal (Taxable)                     ${money(subtotal)}
+                        Tax Rate %                             ${(TAX_RATE * 100).toFixed(1)}%
+                        Tax Amount $                           ${money(taxAmount)}
+                        Invoice Total                          ${money(invoiceTotal)}`;
+    summaryDiv.textContent = summaryText;
+  }
+
+  document.getElementById('memberToggle').addEventListener('change', render);
+  document.getElementById('clearBtn').addEventListener('click', clearCart);
+
+  render();
+  </script>
+</body>
+</html>
